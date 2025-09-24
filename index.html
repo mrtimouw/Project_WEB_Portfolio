@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Raffaele Cammi — Portfolio</title>
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<header>
+<div class="container nav">
+<strong>RC</strong>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html">Projects</a>
+<a href="cv.html">CV</a>
+<a href="contact.php">Contact</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<section class="hero">
+<div>
+<h1>Hello, I'm <span style="color:var(--accent)">Raffaele Cammi</span></h1>
+<p>I am a Computer Engineer and I develop simple, accessible, and fast websites.</p>
+<a class="btn primary" href="portfolio.html">View Projects</a>
+<a class="btn" href="contact.php" style="margin-left:8px">Get in Touch</a>
+</div>
+<div>
+<img src="assets/images/photo.jpg" alt="Photo or cover" style="width:100%; border-radius:16px" />
+</div>
+</section>
+
+<section class="section">
+<h2>Main Skills</h2>
+<p class="lead">HTML5, CSS3, JavaScript, PHP, MySQL</p>
+<div class="grid">
+<div class="card"><h3>Frontend</h3><p>Responsive layouts, accessibility, performance.</p></div>
+<div class="card"><h3>Backend</h3><p>Basic CRUD with MySQL.</p></div>
+<div class="card"><h3>UI/UX</h3><p>Clear visual hierarchies, typography, colors.</p></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">© <span id="y"></span> Raffaele Cammi </div>
+</footer>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

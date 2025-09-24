@@ -1,0 +1,208 @@
+:root {
+  --bg: #0f172a; /* slate-900 */
+  --panel: #111827; /* gray-900 */
+  --text: #e5e7eb; /* gray-200 */
+  --muted: #9ca3af; /* gray-400 */
+  --accent: #60a5fa; /* blue-400 */
+}
+
+* { box-sizing: border-box; }
+html { height: 100%; scroll-behavior: smooth; overflow-y: scroll; }
+
+/* ✅ Sticky footer robusto con Flex solo sul body + sfondo unico */
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text);
+
+  /* base plain color per sicurezza */
+  background: var(--bg);
+
+  /* necessario per il layer fisso sotto */
+  position: relative;
+  
+}
+
+/* 🔒 Sfondo unico a tutta pagina (niente ripetizioni) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1200px 700px at 10% -10%, rgba(255,255,255,.06), transparent 60%),
+    radial-gradient(900px 600px at 85% 20%, rgba(96,165,250,.10), transparent 65%),
+    linear-gradient(135deg, #0b1324 0%, #0f172a 50%, #111827 100%);
+  
+  background-repeat: no-repeat;   /* ✅ niente ripetizione */
+  background-size: cover;         /* ✅ allunga per coprire tutto */
+  background-attachment: fixed;   /* ✅ resta fermo mentre scrolli */
+}
+
+
+/* Container */
+.container { 
+  width: min(1100px, 92%); 
+  margin: 0 auto; 
+}
+
+/* Header */
+header { 
+  position: sticky; 
+  top: 0; 
+  background: rgba(17,24,39,.75); 
+  backdrop-filter: blur(8px); 
+  border-bottom: 1px solid #1f2937; 
+  z-index: 50; 
+}
+.nav { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 14px 0; 
+}
+.nav a { 
+  color: var(--text); 
+  text-decoration: none; 
+  margin-left: 18px; 
+  font-weight: 600; 
+}
+.nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { 
+  display: grid; 
+  grid-template-columns: 1.2fr 1fr; 
+  gap: 32px; 
+  align-items: center; 
+  padding: 56px 0; 
+}
+.hero h1 { 
+  font-size: clamp(32px, 4vw, 56px); 
+  line-height: 1.05; 
+  margin: 0 0 12px; 
+}
+.hero p { 
+  color: var(--muted); 
+  margin: 0 0 24px; 
+}
+.btn { 
+  display: inline-block; 
+  padding: 10px 16px; 
+  border: 1px solid #374151; 
+  border-radius: 10px; 
+  color: var(--text); 
+  text-decoration: none; 
+}
+.btn.primary { 
+  background: linear-gradient(135deg, #2563eb, #06b6d4); 
+  border: none; 
+}
+
+/* Grid + Cards */
+.grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+  gap: 18px;
+}
+.card { 
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); 
+  border: 1px solid #1f2937; 
+  border-radius: 14px; 
+  padding: 16px; 
+  transition: transform .15s ease, border-color .2s ease; 
+}
+.card:hover { 
+  transform: translateY(-4px); 
+  border-color: #374151; 
+}
+.card img { 
+  width: 100%; 
+  height: 160px; 
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+
+/* Sections */
+.section { 
+  padding: 48px 0; 
+}
+.section h2 { 
+  margin: 0 0 12px; 
+  font-size: 28px; 
+}
+.section p.lead { 
+  color: var(--muted); 
+  margin-top: 0; 
+}
+
+/* ✅ Parte cruciale per lo sticky footer */
+main { 
+  flex: 1; 
+  display: block;
+}
+
+/* Footer */
+footer { 
+  padding: 36px 0 48px; 
+  border-top: 1px solid #1f2937; 
+  color: var(--muted); 
+  text-align: center; 
+}
+
+/* Layout non lineare per portfolio */
+.masonry { 
+  column-count: 3; 
+  column-gap: 16px; 
+}
+@media (max-width: 900px) { 
+  .masonry { column-count: 2; } 
+  .hero { grid-template-columns: 1fr; } 
+}
+@media (max-width: 600px) { 
+  .masonry { column-count: 1; } 
+}
+.masonry .card { 
+  break-inside: avoid; 
+  margin-bottom: 16px; 
+}
+
+/* Form contatti */
+form label { 
+  display: block; 
+  margin: 10px 0 6px; 
+}
+input[type="text"], input[type="email"], textarea { 
+  width: 100%; 
+  padding: 10px; 
+  border-radius: 10px; 
+  border: 1px solid #374151; 
+  background: #0b1220; 
+  color: var(--text); 
+}
+button { 
+  padding: 10px 16px; 
+  border-radius: 10px; 
+  border: 1px solid #374151; 
+  background: #101826; 
+  color: var(--text); 
+  cursor: pointer; 
+}
+button:hover { border-color: #4b5563; }
+
+/* Badge e filtri */
+.badge { 
+  font-size: 12px; 
+  padding: 4px 8px; 
+  border: 1px solid #374151; 
+  border-radius: 999px; 
+  color: var(--muted); 
+}
+.filter { 
+  display: flex; 
+  gap: 10px; 
+  margin-bottom: 16px; 
+}

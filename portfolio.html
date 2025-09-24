@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects — Raffaele Cammi</title>
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<header>
+<div class="container nav">
+<strong>RC</strong>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html">Projects</a>
+<a href="cv.html">CV</a>
+<a href="contact.php">Contact</a>
+</nav>
+</div>
+</header>
+
+<main class="container section">
+<h1>Projects</h1>
+<p class="lead">Select a category:</p>
+<div class="filter">
+<button class="badge active" data-filter="all">All</button>
+<button class="badge" data-filter="web">Web</button>
+<button class="badge" data-filter="design">Design</button>
+<button class="badge" data-filter="other">Other</button>
+</div>
+
+<!-- Masonry Layout -->
+<div class="masonry">
+<article class="card" data-category="web">
+<img src="https://picsum.photos/seed/aca/800/600" alt="Preview ACA MPI Project" />
+<h3>Project ACA_MPI</h3>
+<p>Parallel computing project developed with MPI.</p>
+<a class="btn" href="https://github.com/mrtimouw/Project_ACA_MPI.git" target="_blank">GitHub</a>
+</article>
+
+<article class="card" data-category="web">
+<img src="https://picsum.photos/seed/ir/800/600" alt="Preview IR Project" />
+<h3>Project_IR</h3>
+<p>Information Retrieval project with data indexing and search.</p>
+<a class="btn" href="https://github.com/mrtimouw/Project_IR.git" target="_blank">GitHub</a>
+</article>
+
+<article class="card" data-category="web">
+<img src="https://picsum.photos/seed/web/800/600" alt="Preview WEB Project" />
+<h3>Project_WEB</h3>
+<p>Personal portfolio website with PHP and MySQL integration.</p>
+<a class="btn" href="https://github.com/mrtimouw/Project_WEB_Portfolio.git" target="_blank">GitHub</a>
+</article>
+
+<article class="card" data-category="other">
+<img src="https://picsum.photos/seed/iot/800/600" alt="Preview IoT Project" />
+<h3>Project_IOT</h3>
+<p>Internet of Things project with sensors and data processing.</p>
+<a class="btn" href="https://github.com/tuo-username/Project_IOT" target="_blank">GitHub</a>
+</article>
+</div>
+</main>
+
+<footer>
+<div class="container">© <span id="y"></span> Raffaele Cammi</div>
+</footer>
+<script src="assets/script.js"></script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
