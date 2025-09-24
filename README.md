@@ -5,7 +5,7 @@ It was created as part of my learning journey in **web development**, using mode
 
 ---
 
-## 🚀 Features
+##  Features
 - Responsive layout designed with **HTML5** and **CSS3**
 - Dynamic sections powered by **JavaScript**
 - Contact form with **PHP** and database integration
@@ -16,7 +16,7 @@ It was created as part of my learning journey in **web development**, using mode
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 - **Frontend:** HTML5, CSS3, JavaScript  
 - **Backend:** PHP  
 - **Database:** MySQL (optional, used for contact form)  
@@ -24,8 +24,7 @@ It was created as part of my learning journey in **web development**, using mode
 
 ---
 
-## 📬 Contact
-Created by **Raffaele Cammi**  
-Feel free to reach out if you’d like to collaborate or share feedback!  
+Raffaele Cammi – Computer Engineering student at the University of Pavia.
 
+This project was developed for the course Web and Multimedia Technologies (A.Y. 2024–2025).
 ---
