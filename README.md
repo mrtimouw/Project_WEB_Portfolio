@@ -27,4 +27,4 @@ It was created as part of my learning journey in **web development**, using mode
 Raffaele Cammi – Computer Engineering student at the University of Pavia.
 
 This project was developed for the course Web and Multimedia Technologies (A.Y. 2024–2025).
----
+
